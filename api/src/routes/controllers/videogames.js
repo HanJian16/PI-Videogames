@@ -55,7 +55,7 @@ const getGameByIdApi = async (id) => {
 
 const getGameByIdDb = async (id) => {
     try {
-        let gameId = await Videogame.findbyPk(id);
+        let gameId = await Videogame.findByPk(id);
         return gameId;
     } catch (err) {
         console.error(err)

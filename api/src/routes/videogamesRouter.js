@@ -21,7 +21,7 @@ videogamesRouter.get('/', async (req, res) => {
         res.status(404).json({ error: error.message })
     }
 });
-videogamesRouter.get('/:idVideogame', async (req, res) => {
+videogamesRouter.get('/api/:idVideogame', async (req, res) => {
     try {
         let { idVideogame } = req.params;
         let gameApi = await getGameByIdApi(idVideogame);
@@ -30,6 +30,16 @@ videogamesRouter.get('/:idVideogame', async (req, res) => {
         res.status(404).json({ error: err.message })
     }
 });
+
+videogamesRouter.get("/db/:id", async (req, res) => {
+    try {
+        let {id} = req.params;
+        let gameDb = await getGameByIdDb(id);
+        res.status(200).json(gameDb)
+    } catch (err) {
+        console.error(err)
+    }
+})
 
 videogamesRouter.post("/", async (req, res) => {
     try {
