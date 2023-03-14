@@ -1,17 +1,16 @@
 
 const initialState = {
-  allgames: [],
+  allGames: [],
   games: [],
   genres: [],
 };
 
 export default function rootReducer(state = initialState, action) {
   switch (action.type) {
-    case GET_GAMES:
+    case 'GET_GAMES':
       return {
         ...state,
-        countgamesries: action.payload,
-        allgames: action.payload,
+        allGames: action.payload,
       };
     
     default:
