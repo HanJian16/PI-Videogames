@@ -11,7 +11,8 @@ genresRouter.get('/', async(req, res) => {
             where: { name: `${element.name}` },
           })
     });
-    res.status(200).send('Hecho!')
+    const allGenres = await Genre.findAll();
+    res.status(200).send(allGenres)
 });
 
 module.exports = genresRouter;

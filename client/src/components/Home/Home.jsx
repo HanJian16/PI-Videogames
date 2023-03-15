@@ -5,6 +5,7 @@ import { getGames, filterGamesByGenre, filterGamesByOrigin, orderByName, orderBy
 import { Link } from 'react-router-dom';
 import Card from './Card.jsx';
 import Paginado from '../Paginado/Paginado.jsx';
+import SearchBar from './SearchBar.jsx';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -55,7 +56,7 @@ export default function Home() {
 
   return (
     <div>
-      <Link to='/videogames'>Crear Juego</Link>
+      <Link to='/game'>Crear Juego</Link>
       <h1>Los mejores juegos</h1>
       <button onClick={e => { handleClick(e) }}>
         Volver a cargar todos los juegos
@@ -103,6 +104,7 @@ export default function Home() {
           allGames={allGames.length}
           paginado={paginado}
         />
+        <SearchBar/>
         {
           currentGames?.map((el) => {
             return (
