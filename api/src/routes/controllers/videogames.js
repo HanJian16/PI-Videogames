@@ -62,8 +62,8 @@ const getGameByIdDb = async (id) => {
     }
 };
 
-const postGame = async (name, description, platforms, imagen, released, rating) => {
-    let newGame = await Videogame.create({ name, description, platforms, imagen, released, rating })
+const postGame = async (name, description, platforms, background_image, released, rating) => {
+    let newGame = await Videogame.create({ name, description, platforms, background_image, released, rating })
     return newGame;
 }
 module.exports = { getGamesFromApi, getGamesFromDb, getGameByIdApi, getGameByIdDb, postGame }

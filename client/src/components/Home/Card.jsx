@@ -4,7 +4,7 @@ export default function Card({ name, imagen, genres }) {
     return (
         <div>
             <h3>{name}</h3>
-            {genres.map(ele => {
+            {genres && genres.map(ele => {
                 return (
                     <div key={ele.id}>
                         <h3>{ele.name}</h3>
