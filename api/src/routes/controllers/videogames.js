@@ -10,7 +10,7 @@ const getGamesFromApi = async () => {
     const apiUrl = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}`);
     let gamesApi = await apiUrl.data.results.map(el => {
         return {
-            key: el.id,
+            id: el.id,
             name: el.name,
             background_image: el.background_image,
             platforms: el.platforms.map(el => el),
@@ -24,7 +24,7 @@ const getGamesFromApi = async () => {
         let moreGames = await axios.get(next);
         let resultGames = await moreGames.data.results.map(el => {
             return {
-                key: el.id,
+                id: el.id,
                 name: el.name,
                 background_image: el.background_image,
                 platforms: el.platforms.map(el => el),

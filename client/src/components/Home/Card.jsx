@@ -1,10 +1,10 @@
 import React from "react";;
 
-export default function Card({ name, imagen, genres }) {
+export default function Card({ name, imagen, genre }) {
     return (
         <div>
             <h3>{name}</h3>
-            {genres && genres.map(ele => {
+            {genre && genre.map(ele => {
                 return (
                     <div key={ele.id}>
                         <h3>{ele.name}</h3>

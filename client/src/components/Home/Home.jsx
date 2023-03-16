@@ -106,15 +106,13 @@ export default function Home() {
         />
         <SearchBar/>
         {
-          currentGames?.map((el) => {
-            return (
-              <div key={el.id}>
-                <Link to={"/home/" + el.id}>
-                  <Card key={el.id} name={el.name} imagen={el.background_image} genres={el.genres} />
-                </Link>
-              </div>
-            )
-          })
+          currentGames?.map((el, index) => (
+            <div key={index}>
+              <Link to={"/home/" + el.id}>
+                <Card name={el.name} imagen={el.background_image} genre={el.genre} />
+              </Link>
+            </div>
+          ))
         }
       </div>
     </div>
