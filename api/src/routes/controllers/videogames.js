@@ -30,7 +30,7 @@ const getGamesFromApi = async () => {
                 platforms: el.platforms.map(el => el),
                 released: el.released,
                 rating: el.rating,
-                genres: el.genres.map(el => el)
+                genre: el.genres.map(el => el)
             }
         })
         gamesApi.push(...resultGames);

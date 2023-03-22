@@ -1,0 +1,59 @@
+.navConteiner{
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* position: fixed; */
+}
+.button {
+    color: #0099CC;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #43d;
+    color: white;
+}
+
+.h1{
+    color: #fff;
+}
+
+.divConteiner{
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    /* position: fixed; */
+}
+
+.cardsConteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url("../Img/937844.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.label{
+    color: #fff
+}

@@ -1,0 +1,57 @@
+.divContainer {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9zkQYJnky23sbgoWkYN-zYB7eHxXZohNO1w&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.button {
+    color: #0099CC;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+    border: 2px solid #000;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #43d;
+    color: white;
+}
+
+.input {
+    padding: 10px;
+    width: 200px;
+    height: 30px;
+    background: none;
+    border: 2px solid #ffd52d;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    font-size: 15px;
+    color: #ffd52d;
+    outline: none;
+    transition: .5s;
+    margin: 10px;
+}
+
+.colorText {
+    color: #fff;
+}
+
+.pError{
+    color: #f00;
+}
